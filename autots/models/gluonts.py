@@ -193,7 +193,7 @@ class GluonTS(ModelObject):
                     freq=ts_metadata['freq'],
                 )
         if self.gluon_model == 'DeepAR':
-            from gluonts.model.deepar import DeepAREstimator
+            from gluonts.mx.model.deepar import DeepAREstimator
 
             estimator = DeepAREstimator(
                 freq=ts_metadata['freq'],
@@ -211,7 +211,7 @@ class GluonTS(ModelObject):
             )
 
         elif self.gluon_model == 'MQCNN':
-            from gluonts.model.seq2seq import MQCNNEstimator
+            from gluonts.mx.model.seq2seq import MQCNNEstimator
 
             estimator = MQCNNEstimator(
                 freq=ts_metadata['freq'],
@@ -221,7 +221,7 @@ class GluonTS(ModelObject):
             )
 
         elif self.gluon_model == 'SFF':
-            from gluonts.model.simple_feedforward import SimpleFeedForwardEstimator
+            from gluonts.mx.model.simple_feedforward import SimpleFeedForwardEstimator
 
             estimator = SimpleFeedForwardEstimator(
                 prediction_length=ts_metadata['forecast_length'],
@@ -236,7 +236,7 @@ class GluonTS(ModelObject):
             )
 
         elif self.gluon_model == 'Transformer':
-            from gluonts.model.transformer import TransformerEstimator
+            from gluonts.mx.model.transformer import TransformerEstimator
 
             estimator = TransformerEstimator(
                 prediction_length=ts_metadata['forecast_length'],
@@ -246,7 +246,7 @@ class GluonTS(ModelObject):
             )
 
         elif self.gluon_model == 'DeepState':
-            from gluonts.model.deepstate import DeepStateEstimator
+            from gluonts.mx.model.deepstate import DeepStateEstimator
 
             estimator = DeepStateEstimator(
                 prediction_length=ts_metadata['forecast_length'],
@@ -271,7 +271,7 @@ class GluonTS(ModelObject):
 
         elif self.gluon_model == 'WaveNet':
             # Usually needs more epochs/training iterations than other models do
-            from gluonts.model.wavenet import WaveNetEstimator
+            from gluonts.mx.model.wavenet import WaveNetEstimator
 
             estimator = WaveNetEstimator(
                 freq=ts_metadata['freq'],
@@ -279,7 +279,7 @@ class GluonTS(ModelObject):
                 trainer=Trainer(epochs=self.epochs, learning_rate=self.learning_rate),
             )
         elif self.gluon_model == 'DeepVAR':
-            from gluonts.model.deepvar import DeepVAREstimator
+            from gluonts.mx.model.deepvar import DeepVAREstimator
 
             estimator = DeepVAREstimator(
                 target_dim=gluon_train.shape[0],
@@ -341,7 +341,7 @@ class GluonTS(ModelObject):
                 trainer=Trainer(epochs=self.epochs, learning_rate=self.learning_rate),
             )
         elif self.gluon_model == 'SelfAttention':
-            from gluonts.model.san import SelfAttentionEstimator
+            from gluonts.mx.model.san.In import SelfAttentionEstimator
 
             estimator = SelfAttentionEstimator(
                 prediction_length=ts_metadata['forecast_length'],
