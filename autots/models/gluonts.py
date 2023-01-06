@@ -513,41 +513,21 @@ class GluonTS(ModelObject):
             gluon_model_choice = random.choices(
                 [
                     'DeepAR',
-                    'NPTS',
-                    'DeepState',
+                    
                     'WaveNet',
-                    'DeepFactor',
-                    'Transformer',
-                    'SFF',
-                    'MQCNN',
+                    
                     'DeepVAR',
-                    'GPVAR',
-                    'NBEATS',
-                    'Rotbaum',
+                    
                     'LSTNet',
-                    'DeepRenewalProcess',
-                    'SelfAttention',
-                    'TemporalFusionTransformer',
-                    'DeepTPP',
+                   
                 ],
                 [
-                    0.1,
-                    0.2,
-                    0.05,
+                    0.1, 
                     0.1,
                     0.1,
-                    0.2,
+                    
                     0.1,
-                    0.1,
-                    0.1,
-                    0.1,
-                    0.05,
-                    0.1,
-                    0.1,
-                    0.1,
-                    0.1,
-                    0.1,
-                    0.1,
+                   
                 ],
                 k=1,
             )[0]
@@ -558,41 +538,23 @@ class GluonTS(ModelObject):
             gluon_model_choice = random.choices(
                 [
                     'DeepAR',
-                    'NPTS',
-                    'DeepState',
+                  
                     'WaveNet',
-                    'DeepFactor',
-                    'Transformer',
-                    'SFF',
-                    'MQCNN',
+                   
                     'DeepVAR',
-                    'GPVAR',
-                    'NBEATS',
-                    'Rotbaum',
+                   
                     'LSTNet',
-                    'DeepRenewalProcess',
-                    'SelfAttention',
-                    'TemporalFusionTransformer',
-                    'DeepTPP',
+                  
                 ],
                 [
                     0.1,
-                    0.2,
-                    0.05,
+                  
                     0.1,
+                 
                     0.1,
-                    0.2,
+                   
                     0.1,
-                    0.1,
-                    0.1,
-                    0.0,
-                    0.05,
-                    0.1,
-                    0.1,
-                    0.1,
-                    0.1,
-                    0.1,
-                    0.1,
+                 
                 ],
                 k=1,
             )[0]
