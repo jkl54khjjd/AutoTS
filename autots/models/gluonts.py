@@ -73,12 +73,18 @@ class GluonTS(ModelObject):
             verbose=verbose,
         )
         self.gluon_model = gluon_model
+        
         if self.gluon_model in ['NPTS', 'Rotbaum']:
             self.epochs = 20
             self.learning_rate = 0.001
         else:
             self.epochs = epochs
             self.learning_rate = learning_rate
+            
+        print(f"self.gluon_model = {self.gluon_model}")
+        print(f"self.epochs = {self.epochs}")
+        print(f"self.learning_rate  = {self.learning_rate }")
+        
         self.context_length = context_length
         self.forecast_length = forecast_length
         self.multivariate_mods = ['DeepVAR', 'GPVAR']
