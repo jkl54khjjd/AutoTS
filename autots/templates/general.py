@@ -100,7 +100,7 @@ general_template_dict = {
     },
     "16": {
         "Model": "GluonTS",
-        "ModelParameters": "{\"gluon_model\": \"DeepAR\", \"epochs\": 150, \"learning_rate\": 0.001, \"context_length\": 10}",
+        "ModelParameters": "{\"gluon_model\": \"DeepAR\", \"epochs\": 15, \"learning_rate\": 0.001, \"context_length\": 10}",
         "TransformationParameters": "{\"fillna\": \"ffill\", \"transformations\": {\"0\": \"PowerTransformer\", \"1\": \"DifferencedTransformer\", \"2\": \"bkfilter\"}, \"transformation_params\": {\"0\": {}, \"1\": {}, \"2\": {}}}",
         "Ensemble": 0,
     },
