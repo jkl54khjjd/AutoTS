@@ -484,6 +484,7 @@ def ModelMonster(
             random_seed=random_seed,
             verbose=verbose,
             n_jobs=1,
+            trainer_config={"accelerator":"gpu"},
             **parameters,
         )
     elif model == 'DynamicFactorMQ':
