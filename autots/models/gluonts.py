@@ -205,7 +205,7 @@ class GluonTS(ModelObject):
                 freq=ts_metadata['freq'],
                 context_length=ts_metadata['context_length'],
                 prediction_length=ts_metadata['forecast_length'],
-                trainer=Trainer(epochs=self.epochs, learning_rate=self.learning_rate, num_batches_per_epoch=11),
+                trainer=Trainer(epochs=self.epochs, learning_rate=self.learning_rate, num_batches_per_epoch=110),
             )
         elif self.gluon_model == 'NPTS':
             from gluonts.model.npts import NPTSEstimator
@@ -223,7 +223,7 @@ class GluonTS(ModelObject):
                 freq=ts_metadata['freq'],
                 context_length=ts_metadata['context_length'],
                 prediction_length=ts_metadata['forecast_length'],
-                trainer=Trainer(epochs=self.epochs, learning_rate=self.learning_rate, num_batches_per_epoch=11),
+                trainer=Trainer(epochs=self.epochs, learning_rate=self.learning_rate, num_batches_per_epoch=110),
             )
 
         elif self.gluon_model == 'SFF':
@@ -248,7 +248,7 @@ class GluonTS(ModelObject):
                 prediction_length=ts_metadata['forecast_length'],
                 context_length=ts_metadata['context_length'],
                 freq=ts_metadata['freq'],
-                trainer=Trainer(epochs=self.epochs, learning_rate=self.learning_rate, num_batches_per_epoch=11),
+                trainer=Trainer(epochs=self.epochs, learning_rate=self.learning_rate, num_batches_per_epoch=110),
             )
 
         elif self.gluon_model == 'DeepState':
@@ -261,7 +261,7 @@ class GluonTS(ModelObject):
                 use_feat_static_cat=False,
                 cardinality=[1],
                 trainer=Trainer(
-                    ctx='gpu', epochs=self.epochs, learning_rate=self.learning_rate, num_batches_per_epoch=11
+                    ctx='gpu', epochs=self.epochs, learning_rate=self.learning_rate, num_batches_per_epoch=110
                 ),
             )
 
@@ -272,7 +272,7 @@ class GluonTS(ModelObject):
                 freq=ts_metadata['freq'],
                 context_length=ts_metadata['context_length'],
                 prediction_length=ts_metadata['forecast_length'],
-                trainer=Trainer(epochs=self.epochs, learning_rate=self.learning_rate, num_batches_per_epoch=11),
+                trainer=Trainer(epochs=self.epochs, learning_rate=self.learning_rate, num_batches_per_epoch=110),
             )
 
         elif self.gluon_model == 'WaveNet':
@@ -282,7 +282,7 @@ class GluonTS(ModelObject):
             estimator = WaveNetEstimator(
                 freq=ts_metadata['freq'],
                 prediction_length=ts_metadata['forecast_length'],
-                trainer=Trainer(epochs=self.epochs, learning_rate=self.learning_rate, num_batches_per_epoch=11),
+                trainer=Trainer(epochs=self.epochs, learning_rate=self.learning_rate, num_batches_per_epoch=110),
             )
         elif self.gluon_model == 'DeepVAR':
             from gluonts.mx.model.deepvar import DeepVAREstimator
@@ -292,7 +292,7 @@ class GluonTS(ModelObject):
                 freq=ts_metadata['freq'],
                 context_length=ts_metadata['context_length'],
                 prediction_length=ts_metadata['forecast_length'],
-                trainer=Trainer(epochs=self.epochs, learning_rate=self.learning_rate, num_batches_per_epoch=11),
+                trainer=Trainer(epochs=self.epochs, learning_rate=self.learning_rate, num_batches_per_epoch=110),
             )
         elif self.gluon_model == 'GPVAR':
             from gluonts.model.gpvar import GPVAREstimator
@@ -302,7 +302,7 @@ class GluonTS(ModelObject):
                 freq=ts_metadata['freq'],
                 context_length=ts_metadata['context_length'],
                 prediction_length=ts_metadata['forecast_length'],
-                trainer=Trainer(epochs=self.epochs, learning_rate=self.learning_rate, num_batches_per_epoch=11),
+                trainer=Trainer(epochs=self.epochs, learning_rate=self.learning_rate, num_batches_per_epoch=110),
             )
         elif self.gluon_model == 'LSTNet':
             from gluonts.model.lstnet import LSTNetEstimator
@@ -315,7 +315,7 @@ class GluonTS(ModelObject):
                 channels=2,
                 context_length=ts_metadata['context_length'],
                 prediction_length=ts_metadata['forecast_length'],
-                trainer=Trainer(epochs=self.epochs, learning_rate=self.learning_rate, num_batches_per_epoch=11),
+                trainer=Trainer(epochs=self.epochs, learning_rate=self.learning_rate, num_batches_per_epoch=110),
             )
         elif self.gluon_model == 'NBEATS':
             from gluonts.model.n_beats import NBEATSEstimator
@@ -324,7 +324,7 @@ class GluonTS(ModelObject):
                 freq=ts_metadata['freq'],
                 context_length=ts_metadata['context_length'],
                 prediction_length=ts_metadata['forecast_length'],
-                trainer=Trainer(epochs=self.epochs, learning_rate=self.learning_rate, num_batches_per_epoch=11),
+                trainer=Trainer(epochs=self.epochs, learning_rate=self.learning_rate, num_batches_per_epoch=110),
             )
         elif self.gluon_model == 'Rotbaum':
             from gluonts.model.rotbaum import TreeEstimator
@@ -333,7 +333,7 @@ class GluonTS(ModelObject):
                 freq=ts_metadata['freq'],
                 context_length=ts_metadata['context_length'],
                 prediction_length=ts_metadata['forecast_length'],
-                # trainer=Trainer(epochs=self.epochs, learning_rate=self.learning_rate, num_batches_per_epoch=11),
+                # trainer=Trainer(epochs=self.epochs, learning_rate=self.learning_rate, num_batches_per_epoch=110),
             )
         elif self.gluon_model == 'DeepRenewalProcess':
             from gluonts.model.renewal import DeepRenewalProcessEstimator
@@ -344,7 +344,7 @@ class GluonTS(ModelObject):
                 num_layers=1,  # original paper used 1 layer, 10 cells
                 num_cells=10,
                 freq=ts_metadata['freq'],
-                trainer=Trainer(epochs=self.epochs, learning_rate=self.learning_rate, num_batches_per_epoch=11),
+                trainer=Trainer(epochs=self.epochs, learning_rate=self.learning_rate, num_batches_per_epoch=110),
             )
         elif self.gluon_model == 'SelfAttention':
             from gluonts.mx.model.san.In import SelfAttentionEstimator
@@ -367,7 +367,7 @@ class GluonTS(ModelObject):
                 prediction_length=ts_metadata['forecast_length'],
                 context_length=ts_metadata['context_length'],
                 freq=ts_metadata['freq'],
-                trainer=Trainer(epochs=self.epochs, learning_rate=self.learning_rate,num_batches_per_epoch=11),
+                trainer=Trainer(epochs=self.epochs, learning_rate=self.learning_rate,num_batches_per_epoch=110),
             )
         elif self.gluon_model == 'DeepTPP':
             from gluonts.model.tpp.deeptpp import DeepTPPEstimator
